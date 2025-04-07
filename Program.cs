@@ -39,12 +39,21 @@ namespace Topic_7___Collections
         static void Integers()
         {
             Random generator = new Random();
-            List<int> numbers = new List<int>() {12,18,17,12,15,  18,19,19,18,17,  15,14,13,16,11};
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 15; i++)
+            {
+                numbers.Add(generator.Next(10,21));
+            }
+
             string choice = "";
 
             while (choice != "m")
             {
-                Console.Clear(); 
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine(string.Join(", ", numbers));
+                Console.WriteLine();
                 Console.WriteLine("Which part would you like to view?:");
                 Console.WriteLine();
                 Console.WriteLine($"Current List:");
@@ -55,7 +64,7 @@ namespace Topic_7___Collections
                 Console.WriteLine("4 - Add Number");
                 Console.WriteLine("5 - Number Frequency (Specific)");
 
-                Console.WriteLine();
+               Console.WriteLine();
 
                 Console.WriteLine("6 - Largest Value");
                 Console.WriteLine("7 - Smallest Value");
@@ -81,7 +90,7 @@ namespace Topic_7___Collections
 
                 }
 
-                else if (choice == "3")
+                else if (choice == "3"||choice == "remove"||choice == "remove number")
                 {
 
                 }
@@ -95,7 +104,32 @@ namespace Topic_7___Collections
                 {
 
                 }
+                //
+                else if (choice == "6")
+                {
 
+                }
+
+                else if (choice == "7")
+                {
+
+                }
+
+                else if (choice == "8")
+                {
+
+                }
+
+                else if (choice == "9")
+                {
+
+                }
+
+                else if (choice == "10")
+                {
+
+                }
+                //
                 else if (choice == "m") ;
 
                 else
@@ -108,7 +142,7 @@ namespace Topic_7___Collections
 
         static void Strings()
         {
-
+            List<string> vegetables = new List<string>() {"carrot","celery","beet","radish","cabbage"};
         }
 
     }
